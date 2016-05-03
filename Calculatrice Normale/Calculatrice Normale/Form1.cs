@@ -34,8 +34,9 @@ namespace Calculatrice_Normale
 
         private void Form1_Resize(object sender, EventArgs e)
         {
-            graph.Height = (uint)this.Height - 100;
-            graph.Width = (uint)this.Width - 100;
+            graph.Reset();
+            graph.Height = (uint)this.Height - 200;
+            graph.Width = (uint)this.Width - 200;
             Refresh();
         }
     }
