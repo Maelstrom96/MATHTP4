@@ -100,6 +100,9 @@ namespace Calculatrice_Normale
                 {
                     double z = -4 + (i / ((double)axeWidth / (double)8));
 
+                    Chart chartas = new Chart();
+                    chart.DataManipulator.Statistics.NormalDistribution(0);
+
                     double val = 0.5 - MathNet.Numerics.Distributions.Normal.PDF(0,1,z);
                     double pointHeight = ((val * (double)Height) / .5) + Position.Y;
                     function[i] = new Point(Position.X + i + space, (int)pointHeight);
